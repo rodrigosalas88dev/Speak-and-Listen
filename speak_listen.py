@@ -5,11 +5,6 @@ from pathlib import Path
 import re
 import datetime
 
-#  se puede preguntar al usuario donde quiere guardar el archivo
-#  libreria logging - para hacer el print
-
-#  libreria get text (idioma)
-
 
 class Recognizer:
 
