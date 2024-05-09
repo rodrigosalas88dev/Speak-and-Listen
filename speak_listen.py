@@ -92,12 +92,16 @@ def save_file_choice(recognizer, text, audio, new_user_input, desktop_path):
 def main():
     """Starting the program. The bot speak"""
     recognizer = Recognizer()
-    recognizer.speak("We will proceed to save your voice note, listening...")  # The bot speak
+    # The bot speak
+    recognizer.speak("We will proceed to save your voice note, listening...")
     desktop_path = user_desktop_path()  # Identify the user path
-    text, audio = recognizer.hear_me()  # Recognize user voice, and take 2 values (text, audio)
-    user_input = recognizer.save()  # Ask to user about how to save data and take the value (user_input)
+    # Recognize user voice, and take 2 values (text, audio)
+    text, audio = recognizer.hear_me()
+    # Ask to user about how to save data and take the value (user_input)
+    user_input = recognizer.save()
     new_user_input = identify_input(user_input)  # Identify user input
-    save_file_choice(recognizer, text, audio, new_user_input, desktop_path)  # Save file user choice
+    save_file_choice(recognizer, text, audio, new_user_input,
+                     desktop_path)  # Save file user choice
 
 
 if __name__ == "__main__":
